@@ -1,3 +1,14 @@
 apiVersion: v1
 kind: Pod
 metadata:
+  name: testapp
+  labels:
+    zone: dev
+    version: 1.0.0
+spec:
+  containers:
+  - name: testapp
+    image: testapp:latest
+    imagePullPolicy: Never
+    ports:
+    - containerPort: 5000
